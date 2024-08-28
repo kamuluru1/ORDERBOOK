@@ -96,7 +96,7 @@ class Orderbook {
     private:
         std::vector<Order> orders; // Vector to store orders
 
-        // Method to find a match for the order
+        // Method to find a match for the order using an auction algorithm. 
         std::vector<Order>::iterator findMatch(std::vector<Order>::iterator orderIt, int quantity, bool fullMatch = false) {
             for (auto it = orders.begin(); it != orders.end(); ++it) {
                 if (it->getSide() != orderIt->getSide() &&
@@ -130,7 +130,9 @@ class Orderbook {
         }
 };
 
+
 int main(nt argc, const char * argv[]) {
+    //Tests
     Orderbook orderbook;
 
     Orderbook::Order order1(1, Orderbook::OrderType::Market, Orderbook::Side::Buy, 0, 10);
