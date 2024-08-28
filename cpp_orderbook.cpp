@@ -130,8 +130,7 @@ class Orderbook {
         }
 };
 
-//int argc, const char * argv[]
-int main() {
+int main(nt argc, const char * argv[]) {
     Orderbook orderbook;
 
     Orderbook::Order order1(1, Orderbook::OrderType::Market, Orderbook::Side::Buy, 0, 10);
